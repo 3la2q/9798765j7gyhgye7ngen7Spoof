@@ -232,7 +232,7 @@ sc stop vgk
 @echo OFF
 cls
 
-title MTD STORE
+title RealSpoofer STORE
 mode con: cols=90 lines=30
 Color 0F
 cls
@@ -356,4 +356,27 @@ set hostspath=%windir%\System32\drivers\etc\hosts
 echo 127.0.0.1 xboxlive.com >> %hostspath%
 echo 127.0.0.1 user.auth.xboxlive.com >> %hostspath%
 echo 127.0.0.1 presence-heartbeat.xboxlive.com >> %hostspath%
+
+
+
+setlocal
+
+set "USERPROFILE=%USERPROFILE%"
+set "APPDATA=%USERPROFILE%\AppData\Roaming\CitizenFX"
+set "LOCAL_DIGITAL_ENTITLEMENTS=%USERPROFILE%\AppData\Local\DigitalEntitlements"
+set "LOCAL_D3DSCACHE=%USERPROFILE%\AppData\Local\D3DSCache"
+set "LOCAL_CRASHDUMPS=%USERPROFILE%\AppData\Local\CrashDumps"
+set "LOCAL_FIVEM=%USERPROFILE%\AppData\Local\FiveM\FiveM.app"
+
+echo Accessing directories...
+echo CitizenFX: %APPDATA%
+echo DigitalEntitlements: %LOCAL_DIGITAL_ENTITLEMENTS%
+echo D3DSCache: %LOCAL_D3DSCACHE%
+echo CrashDumps: %LOCAL_CRASHDUMPS%
+echo FiveM.app: %LOCAL_FIVEM%
+
+pause
+
+
+
 exit
